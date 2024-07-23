@@ -5,8 +5,6 @@ import models.Question;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.List;
 
 public class QuizPanel extends JFrame {
@@ -101,7 +99,7 @@ public class QuizPanel extends JFrame {
         submitButton.addActionListener(e -> {
             int score = 0;
             for (Question question : questions) {
-                if (question.getUserAnswerIndex() == question.getCorrectAnswerIndex()) {
+                if (question.getUserAnswerIndex() == question.getCorrectAnswerIndex()-1) {
                     score++;
                 }
             }
